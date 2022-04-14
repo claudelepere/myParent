@@ -103,11 +103,11 @@ class TermQueryExample {
   }
   
   String searchBooleanQuery() {
-    TermQuery query = new TermQuery(new Term("title", "lucene"));
-    TermQuery query2 = new TermQuery(new Term("author", "sam"));
+    TermQuery query0 = new TermQuery(new Term("title", "lucene"));
+    TermQuery query1 = new TermQuery(new Term("author", "sam"));
     BooleanQuery booleanQuery = new BooleanQuery();
-    booleanQuery.add(query2, Occur.MUST);
-    booleanQuery.add(query, Occur.SHOULD);
+    booleanQuery.add(query1, Occur.MUST);
+    booleanQuery.add(query0, Occur.SHOULD);
     return searchIndexAndDisplayResults(booleanQuery);
   }
   
